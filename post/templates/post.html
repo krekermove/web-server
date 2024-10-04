@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{{name}}</title>
+
+
+    <!-- Include CKEditor CSS -->
+    <link rel="stylesheet" href="{% static 'django_ckeditor_5/dist/styles.css' %}">
+
+    <!-- Include CKEditor JS -->
+    <script src="{% static 'django_ckeditor_5/dist/bundle.js' %}"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            -webkit-user-select: none;
+            /* Safari */
+            -moz-user-select: none;
+            /* Firefox */
+            -ms-user-select: none;
+            /* Internet Explorer/Edge */
+            user-select: none;
+            /* Standard syntax */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ck-content">
+        {{content|safe}}
+    </div>
+</body>
+
+</html>
